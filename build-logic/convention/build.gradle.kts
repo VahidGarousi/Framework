@@ -73,5 +73,9 @@ gradlePlugin {
             id = libs.plugins.framework.jvm.publisher.get().pluginId
             implementationClass = "JvmLibraryPublisherConventionPlugin"
         }
+        register("frameworkAndroidKtlint") {
+            id = libs.plugins.framework.android.ktlint.get().pluginId
+            implementationClass = "KotlinterConventionPlugin"
+        }
     }
 }
