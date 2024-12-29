@@ -41,6 +41,7 @@ hiltExt = "1.2.0"
 jacoco = "0.8.12"
 junit4 = "4.13.2"
 kotlin = "2.1.0"
+kotlinter = "5.0.1"
 kotlinxCoroutines = "1.10.0"
 kotlinxDatetime = "0.6.1"
 kotlinxSerializationJson = "1.7.3"
@@ -169,6 +170,7 @@ androidx-material3-android = { group = "androidx.compose.material3", name = "mat
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotliner = { id = "org.jmailen.kotlinter", version.ref = "kotlinter" }
 
 
 
@@ -182,3 +184,4 @@ framework-android-library = { id = "framework.android.library" }
 framework-android-library-compose = { id = "framework.android.library.compose" }
 framework-jvm-publisher = { id = "framework.jvm.publisher" }
 framework-android-publisher = { id = "framework.android.publisher" }
+framework-android-ktlint = { id = "framework.android.ktlint" }
