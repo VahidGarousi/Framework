@@ -14,6 +14,11 @@ jobs:
     permissions:
       pull-requests: write # required for Danger to post comments
       issues: write # required for Danger to post comments
+      contents: read
+      packages: write
+      checks: write        # Necessary to write reports
+      actions: write       # Necessary to cancel workflow executions
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
