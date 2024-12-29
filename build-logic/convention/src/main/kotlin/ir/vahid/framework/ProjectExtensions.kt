@@ -7,3 +7,6 @@ import org.gradle.kotlin.dsl.getByType
 
 val Project.libs
     get(): VersionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
+
+val Project.moduleInfo
+    get() = extensions.getByType(ModuleInfoExtension::class)

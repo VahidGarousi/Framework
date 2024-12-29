@@ -59,5 +59,13 @@ gradlePlugin {
             id = "framework.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
+        register("frameworkAndroidPublisher") {
+            id = "framework.android.publisher"
+            implementationClass = "AndroidLibraryPublisherConventionPlugin"
+        }
+        register("frameworkJvmPublisher") {
+            id = "framework.jvm.publisher"
+            implementationClass = "JvmLibraryPublisherConventionPlugin"
+        }
     }
 }

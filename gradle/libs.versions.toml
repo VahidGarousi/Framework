@@ -177,4 +177,5 @@ framework-android-test = { id = "framework.android.test" }
 framework-jvm-library = { id = "framework.jvm.library" }
 framework-android-library = { id = "framework.android.library" }
 framework-android-library-compose = { id = "framework.android.library.compose" }
-
+framework-jvm-publisher = { id = "framework.jvm.publisher" }
+framework-android-publisher = { id = "framework.android.publisher" }
