@@ -32,39 +32,39 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
-            id = "framework.android.application.compose"
+            id = libs.plugins.framework.android.application.compose.get().pluginId
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
-            id = "framework.android.application"
+            id = libs.plugins.framework.android.application.asProvider().get().pluginId
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = "framework.android.library.compose"
+            id = libs.plugins.framework.android.library.compose.get().pluginId
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidLibrary") {
-            id = "framework.android.library"
+            id = libs.plugins.framework.android.library.asProvider().get().pluginId
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidTest") {
-            id = "framework.android.test"
+            id = libs.plugins.framework.android.test.get().pluginId
             implementationClass = "AndroidTestConventionPlugin"
         }
         register("androidFlavors") {
-            id = "framework.android.application.flavors"
+            id = libs.plugins.framework.android.application.flavors.get().pluginId
             implementationClass = "AndroidApplicationFlavorsConventionPlugin"
         }
         register("jvmLibrary") {
-            id = "framework.jvm.library"
+            id = libs.plugins.framework.jvm.library.get().pluginId
             implementationClass = "JvmLibraryConventionPlugin"
         }
         register("frameworkAndroidPublisher") {
-            id = "framework.android.publisher"
+            id = libs.plugins.framework.android.publisher.get().pluginId
             implementationClass = "AndroidLibraryPublisherConventionPlugin"
         }
         register("frameworkJvmPublisher") {
-            id = "framework.jvm.publisher"
+            id = libs.plugins.framework.jvm.publisher.get().pluginId
             implementationClass = "JvmLibraryPublisherConventionPlugin"
         }
     }
