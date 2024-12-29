@@ -131,21 +131,21 @@ jobs:
 #          name: screenshot-test-results
 #          path: '**/build/outputs/roborazzi/*_compare.png'
 
-#      - name: Check lint
-#        run: ./gradlew :app:lintProdRelease :app-nia-catalog:lintRelease :lint:lint
+      - name: Check lint
+        run: ./gradlew lintKotlin lint
 
-#      - name: Upload lint reports (HTML)
-#        if: ${{ !cancelled() }}
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: lint-reports
-#          path: '**/build/reports/lint-results-*.html'
+      - name: Upload lint reports (HTML)
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-reports
+          path: '**/build/reports/lint-results-*.html'
 
-#      - name: Upload lint reports (SARIF)
-#        if: ${{ !cancelled() && hashFiles('**/*.sarif') != '' }}
-#        uses: github/codeql-action/upload-sarif@v3
-#        with:
-#          sarif_file: './'
+      - name: Upload lint reports (SARIF)
+        if: ${{ !cancelled() && hashFiles('**/*.sarif') != '' }}
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: './'
 
 #      - name: Check badging
 #        run: ./gradlew :app:checkProdReleaseBadging
