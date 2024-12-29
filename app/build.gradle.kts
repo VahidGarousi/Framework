@@ -33,6 +33,11 @@ android {
             )
         }
     }
+    testOptions {
+        unitTests.all {
+            it.useJUnitPlatform()
+        }
+    }
 }
 
 dependencies {
@@ -60,4 +65,18 @@ dependencies {
     implementation(libs.androidx.compose.material3.navigationSuite)
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.compose.ui.util)
+
+
+    testImplementation(libs.androidx.test.rules)
+    testImplementation(libs.kotest.runner.junit5)
+    testImplementation(libs.kotest.assertions.core)
+    testImplementation(libs.kotest.property)
+
+    androidTestImplementation(libs.androidx.test.core)
+    androidTestImplementation(libs.androidx.test.runner)
+    androidTestImplementation(libs.kotlinx.coroutines.test)
+    androidTestImplementation(libs.androidx.test.espresso.core)
+    androidTestImplementation(libs.androidx.compose.ui.test)
+    androidTestImplementation(libs.hilt.android.testing)
+    androidTestImplementation(libs.kotlin.test)
 }
