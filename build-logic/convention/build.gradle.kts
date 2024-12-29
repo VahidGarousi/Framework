@@ -28,6 +28,12 @@ dependencies {
 }
 
 
+tasks {
+    validatePlugins {
+        enableStricterValidation = true
+        failOnWarning = true
+    }
+}
 
 gradlePlugin {
     plugins {
