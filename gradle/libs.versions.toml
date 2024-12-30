@@ -178,10 +178,12 @@ kotliner = { id = "org.jmailen.kotlinter", version.ref = "kotlinter" }
 framework-android-application = { id = "framework.android.application" }
 framework-android-application-flavors = { id = "framework.android.application.flavors" }
 framework-android-application-compose = { id = "framework.android.application.compose" }
+framework-android-application-jacoco = { id = "framework.android.application.jacoco" }
 framework-android-test = { id = "framework.android.test" }
 framework-jvm-library = { id = "framework.jvm.library" }
 framework-android-library = { id = "framework.android.library" }
 framework-android-library-compose = { id = "framework.android.library.compose" }
+framework-android-library-jacoco = { id = "framework.android.library.jacoco" }
 framework-jvm-publisher = { id = "framework.jvm.publisher" }
 framework-android-publisher = { id = "framework.android.publisher" }
 framework-android-ktlint = { id = "framework.android.ktlint" }
