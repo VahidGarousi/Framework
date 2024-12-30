@@ -147,8 +147,8 @@ jobs:
         with:
           sarif_file: './'
 
-#      - name: Check badging
-#        run: ./gradlew :app:checkProdReleaseBadging
+      - name: Check badging
+        run: ./gradlew :app:checkProductionReleaseBadging
 
   androidTest:
     runs-on: ubuntu-latest
