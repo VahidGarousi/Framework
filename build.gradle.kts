@@ -1,3 +1,5 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
 /*
  * By listing all the plugins used throughout all subprojects in the root project build script, it
  * ensures that the build script classpath remains the same for all projects. This avoids potential
@@ -27,6 +29,7 @@ fun Project.configureGitHooks() {
     registerCopyGitHooksTask()
     registerInstallGitHooksTask()
 }
+
 fun Project.registerCopyPreCommitHookTask() {
     tasks.register("copyPreCommitHook", Copy::class.java) {
         group = "git hooks"
@@ -52,6 +55,7 @@ fun Project.registerCopyPreCommitHookTask() {
         }
     }
 }
+
 fun Project.registerCopyPrePushHookTask() {
     tasks.register("copyPrePushHook", Copy::class.java) {
         group = "git hooks"
@@ -77,6 +81,7 @@ fun Project.registerCopyPrePushHookTask() {
         }
     }
 }
+
 fun Project.registerCopyCommitMsgHookTask() {
     tasks.register("copyCommitMsgHook", Copy::class.java) {
         group = "git hooks"
@@ -102,13 +107,15 @@ fun Project.registerCopyCommitMsgHookTask() {
         }
     }
 }
+
 fun Project.registerCopyGitHooksTask() {
     tasks.register("copyGitHooks", Copy::class.java) {
         group = "git hooks"
         description = "Copies the git hooks from /git-hooks to the .git folder."
-        dependsOn("copyPrePushHook", "copyPreCommitHook","copyCommitMsgHook")
+        dependsOn("copyPrePushHook", "copyPreCommitHook", "copyCommitMsgHook")
     }
 }
+
 fun Project.registerInstallGitHooksTask() {
     tasks.register("installGitHooks", Exec::class.java) {
         group = "git hooks"
@@ -125,6 +132,7 @@ fun Project.registerInstallGitHooksTask() {
         }
     }
 }
+
 fun osSuffix(): String {
     return if (Os.isFamily(Os.FAMILY_WINDOWS)) {
         "windows"
