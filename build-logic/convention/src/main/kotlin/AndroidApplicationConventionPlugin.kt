@@ -17,6 +17,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
                 apply("framework.android.ktlint")
                 apply("com.dropbox.dependency-guard")
+                apply("framework.android.detekt")
             }
 
             extensions.configure<ApplicationExtension> {

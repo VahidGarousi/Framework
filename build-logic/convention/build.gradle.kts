@@ -25,6 +25,7 @@ dependencies {
     compileOnly(libs.android.tools.common)
     compileOnly(libs.compose.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.detekt.gradlePlugin)
     implementation(libs.truth)
 }
 
@@ -85,6 +86,10 @@ gradlePlugin {
         register("androidLibraryJacoco") {
             id = libs.plugins.framework.android.library.jacoco.get().pluginId
             implementationClass = "AndroidLibraryJacocoConventionPlugin"
+        }
+        register("androidDetekt") {
+            id = libs.plugins.framework.android.detekt.get().pluginId
+            implementationClass = "AndroidDetektConventionPlugin"
         }
     }
 }
