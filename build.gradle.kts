@@ -59,7 +59,7 @@ fun Project.registerCopyPrePushHookTask() {
         val prePushFile = file("$rootDir/.git/hooks/pre-push")
         doFirst {
             if (prePushFile.exists()) {
-                logger.lifecycle("\u001b[31mExisting pre-push hook found. Deleting...\u001b[0m")
+                logger.warn("\u001b[31mExisting pre-push hook found. Deleting...\u001b[0m")
                 if (!prePushFile.delete()) {
                     throw GradleException("Failed to delete existing pre-push hook. Please check file permissions.")
                 }
