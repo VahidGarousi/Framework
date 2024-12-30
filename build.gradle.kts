@@ -1,5 +1,3 @@
-import org.apache.tools.ant.taskdefs.condition.Os
-
 /*
  * By listing all the plugins used throughout all subprojects in the root project build script, it
  * ensures that the build script classpath remains the same for all projects. This avoids potential
@@ -12,12 +10,14 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.kotliner) apply false
+    alias(libs.plugins.dependencyGuard) apply false
 }
 
 
 tasks.register("clean", Delete::class) {
     delete(rootProject.layout.buildDirectory)
 }
+
 
 configureGitHooks()
 fun Project.configureGitHooks() {
