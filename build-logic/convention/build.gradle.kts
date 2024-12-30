@@ -78,5 +78,13 @@ gradlePlugin {
             id = libs.plugins.framework.android.ktlint.get().pluginId
             implementationClass = "KotlinterConventionPlugin"
         }
+        register("androidApplicationJacoco") {
+            id = libs.plugins.framework.android.application.jacoco.get().pluginId
+            implementationClass = "AndroidApplicationJacocoConventionPlugin"
+        }
+        register("androidLibraryJacoco") {
+            id = libs.plugins.framework.android.library.jacoco.get().pluginId
+            implementationClass = "AndroidLibraryJacocoConventionPlugin"
+        }
     }
 }

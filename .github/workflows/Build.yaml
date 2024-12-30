@@ -208,15 +208,15 @@ jobs:
           heap-size: 600M
           script: ./gradlew connectedDevelopDebugAndroidTest --daemon
 
-      #      - name: Run local tests (including Roborazzi) for the combined coverage report (only API 30)
-      #        if: matrix.api-level == 30
-      #        # There is no need to verify Roborazzi tests to generate coverage.
-      #        run: ./gradlew testDemoDebugUnitTest -Proborazzi.test.verify=false # Add Prod if we ever add JVM tests for prod
+      - name: Run local tests (including Roborazzi) for the combined coverage report (only API 30)
+        if: matrix.api-level == 30
+        # There is no need to verify Roborazzi tests to generate coverage.
+        run: ./gradlew testDevelopDebugUnitTest -Proborazzi.test.verify=false # Add Prod if we ever add JVM tests for prod
 
-      # Add `createProdDebugUnitTestCoverageReport` if we ever add JVM tests for prod
-      #      - name: Generate coverage reports for Debug variants (only API 30)
-      #        if: matrix.api-level == 30
-      #        run: ./gradlew createDemoDebugCombinedCoverageReport
+       # Add `createProductionDebugUnitTestCoverageReport` if we ever add JVM tests for prod
+      - name: Generate coverage reports for Debug variants (only API 30)
+        if: matrix.api-level == 30
+        run: ./gradlew createDevelopDebugCombinedCoverageReport
 
       - name: Upload test reports
         if: ${{ !cancelled() }}
@@ -237,12 +237,12 @@ jobs:
             ${{ github.workspace }}/**/build/reports/jacoco/**/*Report.xml
           token: ${{ secrets.GITHUB_TOKEN }}
 
-#      - name: Upload local coverage reports (XML + HTML) (only API 30)
-#        if: matrix.api-level == 30
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: coverage-reports
-#          if-no-files-found: error
-#          compression-level: 1
-#          overwrite: false
-#          path: '**/build/reports/jacoco/'
+      - name: Upload local coverage reports (XML + HTML) (only API 30)
+        if: matrix.api-level == 30
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-reports
+          if-no-files-found: error
+          compression-level: 1
+          overwrite: false
+          path: '**/build/reports/jacoco/'

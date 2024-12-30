@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.framework.android.application)
     alias(libs.plugins.framework.android.application.compose)
     alias(libs.plugins.framework.android.application.flavors)
+    alias(libs.plugins.framework.android.application.jacoco)
 }
 
 android {
@@ -80,7 +81,6 @@ dependencies {
     androidTestImplementation(libs.hilt.android.testing)
     androidTestImplementation(libs.kotlin.test)
 }
-
 dependencyGuard {
     configuration("productionReleaseRuntimeClasspath")
 }
