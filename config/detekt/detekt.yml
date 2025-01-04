@@ -1,0 +1,13 @@
+naming:
+  active: true
+  FunctionNaming:
+    active: true
+    excludes:
+      - '**/test/**'
+      - '**/androidTest/**'
+      - '**/androidUnitTest/**'
+      - '**/androidInstrumentedTest/**'
+    functionPattern: '[a-z][a-zA-Z0-9]*'
+    excludeClassPattern: '$^'
+    ignoreAnnotated: ['Composable']
+    # Additional rules to align with Uncle Bob's advice

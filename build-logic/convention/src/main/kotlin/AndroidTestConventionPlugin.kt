@@ -14,10 +14,12 @@ class AndroidTestConventionPlugin : Plugin<Project> {
 
             extensions.configure<TestExtension> {
                 configureKotlinAndroid(this)
-                defaultConfig.targetSdk = 35
+                defaultConfig.targetSdk = TARGET_SDK_VERSION
 //                configureGradleManagedDevices(this)
             }
         }
     }
 
 }
+
+const val TARGET_SDK_VERSION = 35
