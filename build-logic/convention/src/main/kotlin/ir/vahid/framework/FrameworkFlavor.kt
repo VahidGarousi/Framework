@@ -50,7 +50,7 @@ fun configureFlavors(
 
         productFlavors {
             FrameworkFlavor.values().forEach { frameworkFlavor ->
-                create(frameworkFlavor.name) {
+                create(frameworkFlavor.name.lowercase()) {
                     dimension = frameworkFlavor.dimension.name
                     flavorConfigurationBlock(this, frameworkFlavor)
                     if (this@apply is ApplicationExtension && this is ApplicationProductFlavor) {
