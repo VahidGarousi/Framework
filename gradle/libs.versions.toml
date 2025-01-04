@@ -30,6 +30,7 @@ androidxWindowManager = "1.3.0"
 androidxWork = "2.10.0"
 coil = "2.7.0"
 dependencyGuard = "0.5.0"
+sortDependencies = "0.13"
 firebaseBom = "33.7.0"
 firebaseCrashlyticsPlugin = "3.0.2"
 firebasePerfPlugin = "1.4.2"
@@ -175,6 +176,7 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotliner = { id = "org.jmailen.kotlinter", version.ref = "kotlinter" }
 dependencyGuard = { id = "com.dropbox.dependency-guard", version.ref = "dependencyGuard" }
+square-sort-dependencies = { id = "com.squareup.sort-dependencies", version.ref = "sortDependencies" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 
 

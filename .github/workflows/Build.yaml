@@ -151,6 +151,9 @@ jobs:
       - name: Check badging
         run: ./gradlew :app:checkProductionReleaseBadging
 
+      - name: Dependency Sort Checks
+        run: ./gradlew checkSortDependencies
+
   androidTest:
     runs-on: ubuntu-latest
     timeout-minutes: 55

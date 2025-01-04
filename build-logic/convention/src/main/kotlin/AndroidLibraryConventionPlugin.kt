@@ -17,6 +17,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
                 apply("framework.android.ktlint")
                 apply("framework.android.detekt")
+                apply("com.squareup.sort-dependencies")
             }
 
             extensions.configure<LibraryExtension> {
