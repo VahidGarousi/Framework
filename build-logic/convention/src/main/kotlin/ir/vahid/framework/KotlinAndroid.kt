@@ -1,3 +1,4 @@
+@file:Suppress("MaxLineLength")
 package ir.vahid.framework
 
 import com.android.build.api.dsl.CommonExtension
@@ -12,6 +13,8 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinBaseExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 
+const val MIN_SDK_VERSION = 21
+const val COMPILE_SDK_VERSION = 35
 
 /**
  * Configure base Kotlin with Android options
@@ -20,10 +23,10 @@ internal fun Project.configureKotlinAndroid(
     commonExtension: CommonExtension<*, *, *, *, *, *>,
 ) {
     commonExtension.apply {
-        compileSdk = 35
+        compileSdk = COMPILE_SDK_VERSION
 
         defaultConfig {
-            minSdk = 21
+            minSdk = MIN_SDK_VERSION
         }
 
         compileOptions {

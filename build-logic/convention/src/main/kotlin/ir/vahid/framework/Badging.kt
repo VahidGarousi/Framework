@@ -1,3 +1,5 @@
+@file:Suppress("ForbiddenComment")
+
 package ir.vahid.framework
 
 
@@ -58,7 +60,6 @@ abstract class GenerateBadgingTask : DefaultTask() {
 }
 
 
-
 @CacheableTask
 abstract class CheckBadgingTask : DefaultTask() {
 
@@ -117,7 +118,7 @@ fun Project.configureBadgingTasks(
                                 "${baseExtension.buildToolsVersion}/" +
                                 SdkConstants.FN_AAPT2,
                         )
-                    }
+                    },
                 )
                 badging = project.layout.buildDirectory.file(
                     "outputs/apk_from_bundle/${variant.name}/${variant.name}-badging.txt",
