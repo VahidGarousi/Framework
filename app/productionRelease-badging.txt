@@ -1,5 +1,5 @@
 package: name='ir.vahid.framework' versionCode='1' versionName='1.0.0' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'
-sdkVersion:'21'
+minSdkVersion:'21'
 targetSdkVersion:'35'
 uses-permission: name='ir.vahid.framework.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
 application-label:'Framework'
