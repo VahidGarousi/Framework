@@ -91,5 +91,9 @@ gradlePlugin {
             id = libs.plugins.framework.android.detekt.get().pluginId
             implementationClass = "AndroidDetektConventionPlugin"
         }
+        register("kotest") {
+            id = libs.plugins.framework.kotest.get().pluginId
+            implementationClass = "KotestConventionPlugin"
+        }
     }
 }
