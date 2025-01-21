@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.framework.android.application.compose)
     alias(libs.plugins.framework.android.application.flavors)
     alias(libs.plugins.framework.android.application.jacoco)
+    alias(libs.plugins.framework.kotest)
 }
 
 android {
@@ -65,9 +66,9 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.androidx.test.rules)
-    testImplementation(libs.kotest.assertions.core)
-    testImplementation(libs.kotest.property)
-    testImplementation(libs.kotest.runner.junit5)
+//    testImplementation(libs.kotest.assertions.core)
+//    testImplementation(libs.kotest.property)
+//    testImplementation(libs.kotest.runner.junit5)
 
     androidTestImplementation(libs.androidx.compose.ui.test)
     androidTestImplementation(libs.androidx.test.core)
