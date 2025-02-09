@@ -40,8 +40,20 @@ android {
             it.useJUnitPlatform()
         }
     }
+    packaging {
+        resources {
+            excludes.add("/META-INF/{AL2.0,LGPL2.1}/")
+            excludes.add("META-INF/LICENSE.md")
+            excludes.add("META-INF/LICENSE-notice.md")
+        }
+    }
 }
 
+configurations.all {
+    resolutionStrategy {
+        exclude(group = "org.jetbrains.kotlinx", module = "kotlinx-coroutines-debug")
+    }
+}
 dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.foundation)
