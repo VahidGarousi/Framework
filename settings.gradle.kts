@@ -32,3 +32,4 @@ check(JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)) {
 }
 include(":konsist")
 include(":app")
+include(":core:domain")
