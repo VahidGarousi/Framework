@@ -23,6 +23,11 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Framework"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+include(":konsist")
+include(":app")
+include(":core:domain")
+
 check(JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)) {
     """
     Framework requires JDK 17+ but it is currently using JDK ${JavaVersion.current()}.
@@ -30,6 +35,3 @@ check(JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)) {
     https://developer.android.com/build/jdks#jdk-config-in-studio
     """.trimIndent()
 }
-include(":konsist")
-include(":app")
-include(":core:domain")
