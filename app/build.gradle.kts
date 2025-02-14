@@ -76,12 +76,13 @@ dependencies {
     implementation(libs.androidx.window.core)
     implementation(libs.coil.kt)
     implementation(libs.kotlinx.serialization.json)
+    implementation(projects.core.domain)
 
     testImplementation(libs.androidx.test.rules)
-//    testImplementation(libs.kotest.assertions.core)
-//    testImplementation(libs.kotest.property)
-//    testImplementation(libs.kotest.runner.junit5)
 
+    //    testImplementation(libs.kotest.assertions.core)
+    //    testImplementation(libs.kotest.property)
+    //    testImplementation(libs.kotest.runner.junit5)
     androidTestImplementation(libs.androidx.compose.ui.test)
     androidTestImplementation(libs.androidx.test.core)
     androidTestImplementation(libs.androidx.test.espresso.core)
