@@ -1,3 +1,5 @@
+@file:Suppress("LongParameterList", "NestedBlockDepth")
+
 package ir.vahid.core.testing.util
 
 import android.graphics.Bitmap.CompressFormat.PNG
