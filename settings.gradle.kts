@@ -27,6 +27,8 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":konsist")
 include(":app")
 include(":core:domain")
+include(":core:screenshot-testing")
+include(":core:design-system")
 
 check(JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)) {
     """

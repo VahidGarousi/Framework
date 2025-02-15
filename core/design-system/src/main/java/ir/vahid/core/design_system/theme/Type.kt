@@ -1,4 +1,4 @@
-package ir.vahid.framework.ui.theme
+package ir.vahid.core.design_system.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

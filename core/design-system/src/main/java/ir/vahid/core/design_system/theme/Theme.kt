@@ -1,4 +1,4 @@
-package ir.vahid.framework.ui.theme
+package ir.vahid.core.design_system.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

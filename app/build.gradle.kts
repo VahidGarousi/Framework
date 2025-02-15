@@ -76,6 +76,7 @@ dependencies {
     implementation(libs.androidx.window.core)
     implementation(libs.coil.kt)
     implementation(libs.kotlinx.serialization.json)
+    implementation(projects.core.designSystem)
     implementation(projects.core.domain)
 
     testImplementation(libs.androidx.test.rules)
