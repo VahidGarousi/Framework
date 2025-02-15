@@ -19,7 +19,7 @@ runs:
       run: mkdir -p ~/.gradle ; cp .github/ci-gradle.properties ~/.gradle/gradle.properties
 
     - name: Setup Gradle
-      uses: gradle/gradle-build-action@v4
+      uses: gradle/gradle-build-action@v3
       with:
         # Only write to the cache for builds on the 'development' branch
         cache-read-only: ${{ github.ref != 'refs/heads/development' }}
