@@ -1,4 +1,4 @@
-package ir.vahid.core.screenshot_testing.util
+package ir.vahid.core.testing.util
 
 import android.graphics.Bitmap.CompressFormat.PNG
 import androidx.activity.ComponentActivity
