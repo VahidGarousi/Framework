@@ -4,7 +4,7 @@
     "local>android/.github:renovate-config"
   ],
   "baseBranches": [
-    "main"
+    "develop"
   ],
   "gitIgnoredAuthors": [
     "renovate[bot]@users.noreply.github.com",
