@@ -23,4 +23,5 @@ runs:
       with:
         # Only write to the cache for builds on the 'development' branch
         cache-read-only: ${{ github.ref != 'refs/heads/development' }}
+      secrets:
         cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
