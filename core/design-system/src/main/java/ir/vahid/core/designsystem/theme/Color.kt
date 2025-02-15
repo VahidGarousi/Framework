@@ -1,6 +1,6 @@
 @file:Suppress("MagicNumber")
 
-package ir.vahid.core.design_system.theme
+package ir.vahid.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 
