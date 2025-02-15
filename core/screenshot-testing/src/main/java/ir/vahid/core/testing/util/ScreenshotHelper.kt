@@ -1,4 +1,4 @@
-@file:Suppress("LongParameterList", "NestedBlockDepth")
+@file:Suppress("LongParameterList", "NestedBlockDepth", "MagicNumber")
 
 package ir.vahid.core.testing.util
 
@@ -17,6 +17,7 @@ import androidx.compose.ui.test.DeviceConfigurationOverride
 import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.compose.ui.test.onRoot
 import androidx.test.ext.junit.rules.ActivityScenarioRule
+import com.github.takahirom.roborazzi.ExperimentalRoborazziApi
 import com.github.takahirom.roborazzi.RoborazziATFAccessibilityCheckOptions
 import com.github.takahirom.roborazzi.RoborazziATFAccessibilityChecker
 import com.github.takahirom.roborazzi.RoborazziATFAccessibilityChecker.CheckLevel
@@ -68,6 +69,7 @@ fun <A : ComponentActivity> AndroidComposeTestRule<ActivityScenarioRule<A>, A>.c
     }
 }
 
+@OptIn(ExperimentalRoborazziApi::class)
 fun <A : ComponentActivity> AndroidComposeTestRule<ActivityScenarioRule<A>, A>.captureForDevice(
     deviceName: String,
     deviceSpec: String,
