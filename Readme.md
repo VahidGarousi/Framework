@@ -11,29 +11,6 @@ should be structured. Developers are free to choose their own architecture, pack
 dependencies. This template focuses only on **best practices for tooling, testing, and project setup**, allowing
 developers to focus on writing clean and efficient code.
 
-## Features
-
-- **Pre-configured Developer Tools:**
-    -  [x]  Dependency management
-    -  [x]  Git hooks for automated checks
-    -  [x]  Code formatting (via Ktlint)
-    -  [x]  Static analysis (via Detekt)
-    -  [x]  Customizable build configurations
-    -  [x]  Pull request templates for better code reviews
-    -  [x]  Continuous integration with GitHub Actions
-
-- **Additional Tools and Integrations:**
-    - [ ] **Hilt** for Dependency Injection (configurable via setup.gradle).
-    - [ ] **Room** for local database management (removable via setup.gradle).
-    - [ ] **Paparazzi** for UI testing (removable via setup.gradle).
-    - [ ] **Danger** for pull request checks to ensure code quality.
-
-- **Scalable Architecture:**
-    -  [x] Configured to easily adapt to **multi-module projects**.
-    -  [x] **Gradle version catalog** for managing dependencies across modules.
-
----
-
 ### Key Dependencies:
 
 - **Ktlint**: Automatic code formatting.
@@ -63,17 +40,6 @@ git clone https://github.com/VahidGarousi/Framework.git
 cd Framework
 
 ```
-
-## Rename Project
-
-## 📦 Features
-
-- [x] Pre-configured Gradle Plugins – Manage Android applications and libraries efficiently
-- [x] Jetpack Compose Support – Simplified setup for Compose-based projects
-- [x] Code Quality Tools – Integrated support for Ktlint, Detekt, and Jacoco
-- [x] Testing Support – Configured with Kotest & Android Test plugins
-- [x] Multi-module Support – Structured for scalable project architectures
-- [x] Easy CI/CD Integration – Preconfigured Gradle tasks for publishing
 
 ## 📌 Available Plugins
 
