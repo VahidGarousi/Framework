@@ -16,6 +16,7 @@ plugins {
     alias(libs.plugins.dependencyGuard) apply false
     alias(libs.plugins.square.sort.dependencies) apply false
     alias(libs.plugins.detekt) apply true
+    alias(libs.plugins.ksp) apply false
 }
 
 

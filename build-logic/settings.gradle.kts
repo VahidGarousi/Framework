@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+        maven("https://maven.myket.ir")
         gradlePluginPortal()
         google()
     }
@@ -8,6 +9,7 @@ pluginManagement {
 
 dependencyResolutionManagement {
     repositories {
+        maven("https://maven.myket.ir")
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
