@@ -160,13 +160,16 @@ kotest-property = { group = "io.kotest", name = "kotest-property", version.ref =
 konsist = { group = "com.lemonappdev", name = "konsist", version.ref = "konsist" }
 koin-core = { group = "io.insert-koin", name = "koin-core" }
 koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose" }
-koin-annotations = { group = "io.insert-koin", name = "koin-annotations" }
 koin-viewmodel = { group = "io.insert-koin", name = "koin-androidx-viewmodel" }
 koin-compiler = { group = "io.insert-koin", name = "koin-compiler" }
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koinBom" }
 koin-android = { group = "io.insert-koin", name = "koin-android" }
-koin-annotations-core = { group = "io.insert-koin", name = "koin-annotations", version.ref = "koinAnnotations" }
+koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose" }
+koin-androidx-startup = { group = "io.insert-koin", name = "koin-androidx-startup" }
+koin-android-test = { group = "io.insert-koin", name = "koin-android-test" }
+koin-annotations = { group = "io.insert-koin", name = "koin-annotations", version.ref = "koinAnnotations" }
 koin-annotations-compiler = { group = "io.insert-koin", name = "koin-ksp-compiler", version.ref = "koinAnnotations" }
+
 
 # Dependencies of the included build-logic
 compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }

@@ -48,7 +48,7 @@ internal fun Project.configureKoinAndroid(
             add("implementation", platform(bom))
             add("implementation", libs.findLibrary("koin.android").get())
             add("implementation", libs.findLibrary("koin.compose").get())
-            add("compileOnly", libs.findLibrary("koin.annotations.core").get())
+            add("compileOnly", libs.findLibrary("koin.annotations").get())
             add("ksp", libs.findLibrary("koin.annotations.compiler").get())
         }
     }
