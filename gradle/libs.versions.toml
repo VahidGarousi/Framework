@@ -165,7 +165,6 @@ koin-viewmodel = { group = "io.insert-koin", name = "koin-androidx-viewmodel" }
 koin-compiler = { group = "io.insert-koin", name = "koin-compiler" }
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koinBom" }
 koin-android = { group = "io.insert-koin", name = "koin-android" }
-koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose" }
 koin-annotations-core = { group = "io.insert-koin", name = "koin-annotations", version.ref = "koinAnnotations" }
 koin-annotations-compiler = { group = "io.insert-koin", name = "koin-ksp-compiler", version.ref = "koinAnnotations" }
 
