@@ -18,6 +18,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 apply("framework.android.ktlint")
                 apply("com.dropbox.dependency-guard")
                 apply("framework.android.detekt")
+                apply("framework.koin.android.application")
                 apply("com.squareup.sort-dependencies")
             }
 

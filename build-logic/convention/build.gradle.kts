@@ -96,5 +96,14 @@ gradlePlugin {
             id = libs.plugins.framework.kotest.get().pluginId
             implementationClass = "KotestConventionPlugin"
         }
+
+        register("koinAndroidApplication") {
+            id = libs.plugins.framework.koin.android.application.get().pluginId
+            implementationClass = "KoinAndroidApplicationConventionPlugin"
+        }
+        register("koinAndroidLibrary") {
+            id = libs.plugins.framework.koin.android.library.get().pluginId
+            implementationClass = "KoinAndroidLibraryConventionPlugin"
+        }
     }
 }
