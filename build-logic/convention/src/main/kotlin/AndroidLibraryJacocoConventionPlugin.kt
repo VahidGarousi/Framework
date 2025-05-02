@@ -4,18 +4,17 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType
 import ir.vahid.framework.configureJacoco
+import org.gradle.kotlin.dsl.apply
 
 class AndroidLibraryJacocoConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            pluginManager.apply("jacoco")
+            apply(plugin = "jacoco")
             val androidExtension = extensions.getByType<LibraryExtension>()
-
             androidExtension.buildTypes.configureEach {
                 enableAndroidTestCoverage = true
                 enableUnitTestCoverage = true
             }
-
             configureJacoco(extensions.getByType<LibraryAndroidComponentsExtension>())
         }
     }
