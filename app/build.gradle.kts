@@ -10,12 +10,12 @@ plugins {
 
 android {
     namespace = "ir.vahid.framework"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = namespace
-        minSdk = 21
-        targetSdk = 35
+        minSdk = 23
+        targetSdk = 36
 
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

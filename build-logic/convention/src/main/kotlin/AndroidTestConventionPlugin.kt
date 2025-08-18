@@ -22,4 +22,4 @@ class AndroidTestConventionPlugin : Plugin<Project> {
 
 }
 
-const val TARGET_SDK_VERSION = 35
+const val TARGET_SDK_VERSION = 36
