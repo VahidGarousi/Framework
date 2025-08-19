@@ -79,6 +79,11 @@ dependencies {
     implementation(projects.core.designSystem)
     implementation(projects.core.domain)
 
+    implementation(libs.play.services.auth.api.phone)
+// or latest
+
+
+
     testImplementation(libs.androidx.test.rules)
 
     //    testImplementation(libs.kotest.assertions.core)

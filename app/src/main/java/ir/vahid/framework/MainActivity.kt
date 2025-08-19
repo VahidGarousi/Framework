@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import ir.vahid.core.designsystem.theme.FrameworkTheme
+import ir.vahid.framework.contract.sms.SmsReaderScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +21,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             FrameworkTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding),
+                    SmsReaderScreen(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(innerPadding),
                     )
                 }
             }

@@ -30,6 +30,7 @@ androidxWindowManager = "1.4.0"
 androidxWork = "2.10.3"
 coil = "2.7.0"
 dependencyGuard = "0.5.0"
+playServicesAuthApiPhone = "18.2.0"
 sortDependencies = "0.14"
 firebaseBom = "34.1.0"
 firebaseCrashlyticsPlugin = "3.0.2"
@@ -142,6 +143,7 @@ lint-api = { group = "com.android.tools.lint", name = "lint-api", version.ref = 
 lint-checks = { group = "com.android.tools.lint", name = "lint-checks", version.ref = "androidTools" }
 lint-tests = { group = "com.android.tools.lint", name = "lint-tests", version.ref = "androidTools" }
 okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+play-services-auth-api-phone = { module = "com.google.android.gms:play-services-auth-api-phone", version.ref = "playServicesAuthApiPhone" }
 protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version.ref = "protobuf" }
 protobuf-protoc = { group = "com.google.protobuf", name = "protoc", version.ref = "protobuf" }
 retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
