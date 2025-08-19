@@ -1,8 +1,9 @@
-package ir.vahid.framework.contract.sms
+package ir.vahid.framework.contract.sms.pure
 
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.provider.Telephony
 import android.telephony.SmsMessage
 import ir.vahid.framework.contract.api.BroadcastResultContract
 
@@ -19,11 +20,11 @@ import ir.vahid.framework.contract.api.BroadcastResultContract
 class SmsReaderBroadcastReceiver : BroadcastResultContract<Unit, String>() {
 
     override fun createIntentFilter(input: Unit): IntentFilter {
-        return IntentFilter(android.provider.Telephony.Sms.Intents.SMS_RECEIVED_ACTION)
+        return IntentFilter(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)
     }
 
     override fun parseResult(context: Context, intent: Intent): String? {
-        if (intent.action != android.provider.Telephony.Sms.Intents.SMS_RECEIVED_ACTION) return null
+        if (intent.action != Telephony.Sms.Intents.SMS_RECEIVED_ACTION) return null
 
         val bundle = intent.extras ?: return null
         val pdus = bundle.get("pdus") as? Array<*> ?: return null

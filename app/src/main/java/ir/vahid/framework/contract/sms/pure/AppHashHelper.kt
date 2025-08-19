@@ -1,4 +1,4 @@
-package ir.vahid.framework.contract.sms
+package ir.vahid.framework.contract.sms.pure
 
 import android.content.Context
 import android.content.pm.PackageManager

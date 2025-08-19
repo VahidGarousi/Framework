@@ -1,4 +1,4 @@
-package ir.vahid.framework.contract.sms
+package ir.vahid.framework.contract.sms.pure
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
