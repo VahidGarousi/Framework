@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import androidx.annotation.VisibleForTesting
 import androidx.core.content.ContextCompat
 
 /**
@@ -19,31 +20,42 @@ class BroadcastReceiverResultLauncherImpl<I, O>(
 
     override fun launch(input: I) {
         if (receiver != null) return
-
         val filter = contract.createIntentFilter(input)
-
-        val broadcastReceiver = object : BroadcastReceiver() {
-            override fun onReceive(
-                context: Context,
-                intent: Intent,
-            ) {
-                val result = contract.parseResult(context, intent) ?: return
-                onResult(result)
-            }
-        }
-        val flags = when {
-            Build.VERSION.SDK_INT >= 33 && exportedOn33Plus -> ContextCompat.RECEIVER_EXPORTED
-            Build.VERSION.SDK_INT >= 33 -> ContextCompat.RECEIVER_NOT_EXPORTED
-            else -> 0
-        }
+        val broadcastReceiver = createReceiver()
+        val flags = calculateFlags()
         ContextCompat.registerReceiver(context, broadcastReceiver, filter, flags)
         receiver = broadcastReceiver
     }
 
-    override fun cancel() {
-        receiver?.let {
-            runCatching { context.unregisterReceiver(it) }
+    @VisibleForTesting
+    internal fun createReceiver(): BroadcastReceiver =
+        object : BroadcastReceiver() {
+            override fun onReceive(
+                context: Context,
+                intent: Intent,
+            ) {
+                contract.parseResult(context, intent)?.let(onResult)
+            }
         }
+
+    @VisibleForTesting
+    internal fun calculateFlags(): Int =
+        when {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && exportedOn33Plus -> ContextCompat.RECEIVER_EXPORTED
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU -> ContextCompat.RECEIVER_NOT_EXPORTED
+            else -> FLAGS_NONE
+        }
+
+    private fun safeUnregister(receiver: BroadcastReceiver) {
+        runCatching { context.unregisterReceiver(receiver) }.onFailure {
+            // ignore
+        }
+    }
+
+    override fun cancel() {
+        receiver?.let { safeUnregister(it) }
         receiver = null
     }
 }
+
+private const val FLAGS_NONE = 0
