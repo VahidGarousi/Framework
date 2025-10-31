@@ -52,6 +52,7 @@ android {
 configurations.all {
     resolutionStrategy {
         exclude(group = "org.jetbrains.kotlinx", module = "kotlinx-coroutines-debug")
+        exclude(group = "com.github.ajalt.mordant", module = "mordant-jvm-ffm-jvm")
     }
 }
 dependencies {
